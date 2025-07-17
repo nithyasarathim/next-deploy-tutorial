@@ -2,7 +2,7 @@
 
 import { useSession, signIn, signOut } from "next-auth/react";
 
-const page = () => {
+const Page = () => {
   const { data: session } = useSession();
   if(session){
     return(
@@ -18,7 +18,7 @@ const page = () => {
     <div className="w-full h-screen flex">
         <div className="m-auto">
           <p>
-            You're not logged In
+            You are not logged In
           </p>
           <button onClick={()=>{signIn()}}>Sign In</button>
         </div>
@@ -26,4 +26,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
